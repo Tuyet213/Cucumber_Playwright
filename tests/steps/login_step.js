@@ -37,8 +37,7 @@ Then('Người dùng được chuyển hướng đến trang chủ', async () =>
 });
 
 Then('Người dùng thấy thông báo lỗi {string}', async (message) => {
-  const errorMessage = await page.locator('.noty_text').textContent();
-  await expect(errorMessage).toHaveText(message, { timeout: 5000 });
+  await expect(page.locator('.noty_text')).toHaveText(message, { timeout: 5000 });
 });
 
 
