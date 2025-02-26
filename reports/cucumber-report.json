@@ -1,0 +1,173 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "đăng-nhập;đăng-nhập-thành-công",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Đăng nhập thành công",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 934670900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Người dùng truy cập trang đăng nhập",
+            "match": {
+              "location": "tests\\steps\\login_step.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5798159700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Người dùng nhập email \"admin@example.com\" và mật khẩu \"growcrm\"",
+            "match": {
+              "location": "tests\\steps\\login_step.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131160899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "Người dùng nhấp vào nút đăng nhập",
+            "match": {
+              "location": "tests\\steps\\login_step.js:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30009075799,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (E:\\TUYET\\Automation\\Cucumber\\playwright_cucumber\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Người dùng được chuyển hướng đến trang chủ",
+            "match": {
+              "location": "tests\\steps\\login_step.js:34"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 213930300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "đăng-nhập;đăng-nhập-thất-bại---tên-người-dùng-không-tồn-tại",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Đăng nhập thất bại - Tên người dùng không tồn tại",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 168231300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "Người dùng truy cập trang đăng nhập",
+            "match": {
+              "location": "tests\\steps\\login_step.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3118559700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Người dùng nhập email \"invalid_username\" và mật khẩu \"valid_password\"",
+            "match": {
+              "location": "tests\\steps\\login_step.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109769299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "Người dùng nhấp vào nút đăng nhập",
+            "match": {
+              "location": "tests\\steps\\login_step.js:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30016086900,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (E:\\TUYET\\Automation\\Cucumber\\playwright_cucumber\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Người dùng thấy thông báo lỗi \"Invalid login details\"",
+            "match": {
+              "location": "tests\\steps\\login_step.js:39"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 156879899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "đăng-nhập",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Đăng nhập",
+    "tags": [],
+    "uri": "tests\\features\\login.feature"
+  }
+]
