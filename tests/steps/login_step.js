@@ -1,5 +1,5 @@
 const { Given, When, Then, After, Before } = require('@cucumber/cucumber');
-const { expect } = require('chai');
+const { expect } = require('@playwright/test');
 const { chromium } = require('playwright');
 
 let browser, context, page;
@@ -33,12 +33,12 @@ When('Người dùng nhấp vào nút đăng nhập', async () => {
 
 Then('Người dùng được chuyển hướng đến trang chủ', async () => {
   await page.waitForURL('https://demo.growcrm.io/home');
-  expect(page.url()).to.equal('https://demo.growcrm.io/home');
+  await expect(page).toHaveURL('https://demo.growcrm.io/home', { timeout: 5000 });
 });
 
 Then('Người dùng thấy thông báo lỗi {string}', async (message) => {
   const errorMessage = await page.locator('.noty_text').textContent();
-  expect(errorMessage).to.equal(message);
+  await expect(errorMessage).toHaveText(message, { timeout: 5000 });
 });
 
 
